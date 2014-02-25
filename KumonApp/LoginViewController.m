@@ -13,6 +13,9 @@
 @interface LoginViewController ()
 @property (nonatomic, strong) UITextField *NameText;
 @property (nonatomic, strong) UITextField *PasswordText;
+@property (weak, nonatomic) IBOutlet UIImageView *nameArea;
+@property (weak, nonatomic) IBOutlet UIImageView *passwordArea;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -216,7 +219,6 @@
    	NSLog(@"self.PasswordText.text is %@", passwordEntered);
     
 	// Check if userName and password is in the Parser DB
-    
     if(nameEntered !=nil && passwordEntered !=nil){
         PFQuery *query = [PFQuery queryWithClassName:@"Student"];
         [query whereKey:@"UserName" equalTo:self.NameText.text];
@@ -230,7 +232,7 @@
                 AssignmentsTableViewController *assignmentsVC = [[AssignmentsTableViewController alloc] init];
                 [self presentViewController:assignmentsVC animated:YES completion:NULL];
             } else {
-                // Need to think about what to do if invalid username/password
+                //TODO Need to think about what to do if invalid username/password
                 NSLog(@"Username is not in DB");
                 
                 
@@ -242,6 +244,77 @@
         NSLog(@"Invalid name/password!");
     }
 	
+}
+
+- (void)registerForKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+}
+
+- (void)deregisterFromKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidHideNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self registerForKeyboardNotifications];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [self deregisterFromKeyboardNotifications];
+    
+    [super viewWillDisappear:animated];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification {
+    
+    NSDictionary* info = [notification userInfo];
+    
+    CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGPoint buttonOrigin = self.passwordArea.frame.origin;
+    
+    CGFloat buttonHeight = self.passwordArea.frame.size.height;
+    
+    CGRect visibleRect = self.view.frame;
+    
+    visibleRect.size.height -= keyboardSize.height;
+    
+    if (!CGRectContainsPoint(visibleRect, buttonOrigin)){
+        
+        CGPoint scrollPoint = CGPointMake(0.0, buttonOrigin.y - visibleRect.size.height + buttonHeight);
+        [self.scrollView setContentOffset:scrollPoint animated:YES];
+        
+    }
+    
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification {
+    
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
+    
 }
 
 //- (IBAction)loginButtonAction:(UIButton *)sender {
