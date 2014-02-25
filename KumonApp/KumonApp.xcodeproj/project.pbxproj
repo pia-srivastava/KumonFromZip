@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010C8FD247D4461B997DC5B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8731EEC32584D738E5EFC1D /* libPods.a */; };
+		10290AB218B1E1F0002CFADD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290AB118B1E1F0002CFADD /* AudioToolbox.framework */; };
+		10290AB418B1E1FA002CFADD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290AB318B1E1FA002CFADD /* CFNetwork.framework */; };
+		10290AB618B1E20F002CFADD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290AB518B1E20F002CFADD /* CoreLocation.framework */; };
+		10290AB818B1E21C002CFADD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290AB718B1E21C002CFADD /* libz.dylib */; };
+		10290ABA18B1E226002CFADD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290AB918B1E226002CFADD /* MobileCoreServices.framework */; };
+		10290ABC18B1E230002CFADD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290ABB18B1E230002CFADD /* QuartzCore.framework */; };
+		10290ABE18B1E23B002CFADD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290ABD18B1E23B002CFADD /* Security.framework */; };
+		10290AC018B1E245002CFADD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290ABF18B1E245002CFADD /* StoreKit.framework */; };
+		10290AC218B1E252002CFADD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10290AC118B1E252002CFADD /* SystemConfiguration.framework */; };
+		103FE7BF18BC3DA3007ABC53 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103FE7BE18BC3DA3007ABC53 /* Parse.framework */; };
+		108D5E0918B14E3400F89938 /* kumon.png in Resources */ = {isa = PBXBuildFile; fileRef = 108D5E0818B14E3400F89938 /* kumon.png */; };
+		108D5E0B18B14E7F00F89938 /* kumonFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 108D5E0A18B14E7F00F89938 /* kumonFace.png */; };
+		DC16802018B7FA8A000BB982 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC16801F18B7FA8A000BB982 /* FacebookSDK.framework */; };
+		DC16802418B7FCAC000BB982 /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC16802318B7FCAC000BB982 /* LoginAssets.xcassets */; };
+		DC3F933E18BA935C00744D17 /* AssignmentsAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3F933D18BA935C00744D17 /* AssignmentsAssets.xcassets */; };
+		DC3F934018BADA2700744D17 /* info_20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3F933F18BADA2700744D17 /* info_20x20.png */; };
+		DC3F934218BAE1F000744D17 /* AssignmentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3F934118BAE1F000744D17 /* AssignmentHeaderView.xib */; };
+		DC744DEB18BC023900F63739 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC744DE918BC023900F63739 /* LoginViewController.m */; };
+		DC744DEC18BC023900F63739 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC744DEA18BC023900F63739 /* LoginViewController.xib */; };
+		DC744DEE18BC032A00F63739 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC744DED18BC032A00F63739 /* Parse.framework */; };
+		DC744DF218BC06FE00F63739 /* AssignmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC744DF018BC06FE00F63739 /* AssignmentsTableViewController.m */; };
+		DC744DF318BC06FE00F63739 /* AssignmentsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC744DF118BC06FE00F63739 /* AssignmentsTableViewController.xib */; };
+		DCE9B69B18B96A0400C20E6B /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE9B69A18B96A0400C20E6B /* MyCell.xib */; };
+		DCE9B69E18B96A3C00C20E6B /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE9B69D18B96A3C00C20E6B /* MyCell.m */; };
+		DCFFE5B518A97DB100AAEBA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5B418A97DB100AAEBA5 /* Foundation.framework */; };
+		DCFFE5B718A97DB100AAEBA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5B618A97DB100AAEBA5 /* CoreGraphics.framework */; };
+		DCFFE5B918A97DB100AAEBA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5B818A97DB100AAEBA5 /* UIKit.framework */; };
+		DCFFE5BF18A97DB100AAEBA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCFFE5BD18A97DB100AAEBA5 /* InfoPlist.strings */; };
+		DCFFE5C118A97DB100AAEBA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFE5C018A97DB100AAEBA5 /* main.m */; };
+		DCFFE5C518A97DB100AAEBA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFE5C418A97DB100AAEBA5 /* AppDelegate.m */; };
+		DCFFE5CD18A97DB100AAEBA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFFE5CC18A97DB100AAEBA5 /* Images.xcassets */; };
+		DCFFE5D418A97DB100AAEBA5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5D318A97DB100AAEBA5 /* XCTest.framework */; };
+		DCFFE5D518A97DB100AAEBA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5B418A97DB100AAEBA5 /* Foundation.framework */; };
+		DCFFE5D618A97DB100AAEBA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5B818A97DB100AAEBA5 /* UIKit.framework */; };
+		DCFFE5DE18A97DB100AAEBA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCFFE5DC18A97DB100AAEBA5 /* InfoPlist.strings */; };
+		DCFFE5E018A97DB100AAEBA5 /* KumonAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFFE5DF18A97DB100AAEBA5 /* KumonAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCFFE5D718A97DB100AAEBA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCFFE5A918A97DB100AAEBA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCFFE5B018A97DB100AAEBA5;
+			remoteInfo = KumonApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10290AB118B1E1F0002CFADD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		10290AB318B1E1FA002CFADD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		10290AB518B1E20F002CFADD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		10290AB718B1E21C002CFADD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		10290AB918B1E226002CFADD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		10290ABB18B1E230002CFADD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		10290ABD18B1E23B002CFADD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		10290ABF18B1E245002CFADD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		10290AC118B1E252002CFADD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		103FE7BE18BC3DA3007ABC53 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		108D5E0818B14E3400F89938 /* kumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kumon.png; sourceTree = "<group>"; };
+		108D5E0A18B14E7F00F89938 /* kumonFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kumonFace.png; sourceTree = "<group>"; };
+		C5C6291089EA4BD284615C1F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D8731EEC32584D738E5EFC1D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC16801F18B7FA8A000BB982 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		DC16802318B7FCAC000BB982 /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
+		DC3F933D18BA935C00744D17 /* AssignmentsAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssignmentsAssets.xcassets; sourceTree = "<group>"; };
+		DC3F933F18BADA2700744D17 /* info_20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_20x20.png; path = KumonApp/info_20x20.png; sourceTree = "<group>"; };
+		DC3F934118BAE1F000744D17 /* AssignmentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentHeaderView.xib; sourceTree = "<group>"; };
+		DC744DE818BC023900F63739 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		DC744DE918BC023900F63739 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		DC744DEA18BC023900F63739 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
+		DC744DED18BC032A00F63739 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DC744DEF18BC06FE00F63739 /* AssignmentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssignmentsTableViewController.h; path = ../AssignmentsTableViewController.h; sourceTree = "<group>"; };
+		DC744DF018BC06FE00F63739 /* AssignmentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssignmentsTableViewController.m; path = ../AssignmentsTableViewController.m; sourceTree = "<group>"; };
+		DC744DF118BC06FE00F63739 /* AssignmentsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AssignmentsTableViewController.xib; path = ../AssignmentsTableViewController.xib; sourceTree = "<group>"; };
+		DCE9B69A18B96A0400C20E6B /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		DCE9B69C18B96A3C00C20E6B /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		DCE9B69D18B96A3C00C20E6B /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		DCFFE5B118A97DB100AAEBA5 /* KumonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KumonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFFE5B418A97DB100AAEBA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCFFE5B618A97DB100AAEBA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DCFFE5B818A97DB100AAEBA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DCFFE5BC18A97DB100AAEBA5 /* KumonApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KumonApp-Info.plist"; sourceTree = "<group>"; };
+		DCFFE5BE18A97DB100AAEBA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCFFE5C018A97DB100AAEBA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCFFE5C218A97DB100AAEBA5 /* KumonApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KumonApp-Prefix.pch"; sourceTree = "<group>"; };
+		DCFFE5C318A97DB100AAEBA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCFFE5C418A97DB100AAEBA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCFFE5CC18A97DB100AAEBA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCFFE5D218A97DB100AAEBA5 /* KumonAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KumonAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFFE5D318A97DB100AAEBA5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DCFFE5DB18A97DB100AAEBA5 /* KumonAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KumonAppTests-Info.plist"; sourceTree = "<group>"; };
+		DCFFE5DD18A97DB100AAEBA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCFFE5DF18A97DB100AAEBA5 /* KumonAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KumonAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCFFE5AE18A97DB100AAEBA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10290AC218B1E252002CFADD /* SystemConfiguration.framework in Frameworks */,
+				10290AC018B1E245002CFADD /* StoreKit.framework in Frameworks */,
+				10290ABE18B1E23B002CFADD /* Security.framework in Frameworks */,
+				10290ABC18B1E230002CFADD /* QuartzCore.framework in Frameworks */,
+				DC744DEE18BC032A00F63739 /* Parse.framework in Frameworks */,
+				10290ABA18B1E226002CFADD /* MobileCoreServices.framework in Frameworks */,
+				103FE7BF18BC3DA3007ABC53 /* Parse.framework in Frameworks */,
+				10290AB818B1E21C002CFADD /* libz.dylib in Frameworks */,
+				10290AB618B1E20F002CFADD /* CoreLocation.framework in Frameworks */,
+				DCFFE5B718A97DB100AAEBA5 /* CoreGraphics.framework in Frameworks */,
+				10290AB418B1E1FA002CFADD /* CFNetwork.framework in Frameworks */,
+				10290AB218B1E1F0002CFADD /* AudioToolbox.framework in Frameworks */,
+				DC16802018B7FA8A000BB982 /* FacebookSDK.framework in Frameworks */,
+				DCFFE5B918A97DB100AAEBA5 /* UIKit.framework in Frameworks */,
+				DCFFE5B518A97DB100AAEBA5 /* Foundation.framework in Frameworks */,
+				010C8FD247D4461B997DC5B5 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFFE5CF18A97DB100AAEBA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCFFE5D418A97DB100AAEBA5 /* XCTest.framework in Frameworks */,
+				DCFFE5D618A97DB100AAEBA5 /* UIKit.framework in Frameworks */,
+				DCFFE5D518A97DB100AAEBA5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCFFE5A818A97DB100AAEBA5 = {
+			isa = PBXGroup;
+			children = (
+				103FE7BE18BC3DA3007ABC53 /* Parse.framework */,
+				DC3F933F18BADA2700744D17 /* info_20x20.png */,
+				DC3F933D18BA935C00744D17 /* AssignmentsAssets.xcassets */,
+				DCE9B69C18B96A3C00C20E6B /* MyCell.h */,
+				DCE9B69D18B96A3C00C20E6B /* MyCell.m */,
+				DCE9B69A18B96A0400C20E6B /* MyCell.xib */,
+				DC16802318B7FCAC000BB982 /* LoginAssets.xcassets */,
+				DCFFE5BA18A97DB100AAEBA5 /* KumonApp */,
+				DCFFE5D918A97DB100AAEBA5 /* KumonAppTests */,
+				DCFFE5B318A97DB100AAEBA5 /* Frameworks */,
+				DCFFE5B218A97DB100AAEBA5 /* Products */,
+				C5C6291089EA4BD284615C1F /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DCFFE5B218A97DB100AAEBA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCFFE5B118A97DB100AAEBA5 /* KumonApp.app */,
+				DCFFE5D218A97DB100AAEBA5 /* KumonAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCFFE5B318A97DB100AAEBA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC744DED18BC032A00F63739 /* Parse.framework */,
+				DC16801F18B7FA8A000BB982 /* FacebookSDK.framework */,
+				10290AC118B1E252002CFADD /* SystemConfiguration.framework */,
+				10290ABF18B1E245002CFADD /* StoreKit.framework */,
+				10290ABD18B1E23B002CFADD /* Security.framework */,
+				10290ABB18B1E230002CFADD /* QuartzCore.framework */,
+				10290AB918B1E226002CFADD /* MobileCoreServices.framework */,
+				10290AB718B1E21C002CFADD /* libz.dylib */,
+				10290AB518B1E20F002CFADD /* CoreLocation.framework */,
+				10290AB318B1E1FA002CFADD /* CFNetwork.framework */,
+				10290AB118B1E1F0002CFADD /* AudioToolbox.framework */,
+				DCFFE5B418A97DB100AAEBA5 /* Foundation.framework */,
+				DCFFE5B618A97DB100AAEBA5 /* CoreGraphics.framework */,
+				DCFFE5B818A97DB100AAEBA5 /* UIKit.framework */,
+				DCFFE5D318A97DB100AAEBA5 /* XCTest.framework */,
+				D8731EEC32584D738E5EFC1D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCFFE5BA18A97DB100AAEBA5 /* KumonApp */ = {
+			isa = PBXGroup;
+			children = (
+				DC744DEF18BC06FE00F63739 /* AssignmentsTableViewController.h */,
+				DC744DF018BC06FE00F63739 /* AssignmentsTableViewController.m */,
+				DC744DF118BC06FE00F63739 /* AssignmentsTableViewController.xib */,
+				DC744DE818BC023900F63739 /* LoginViewController.h */,
+				DC744DE918BC023900F63739 /* LoginViewController.m */,
+				DC744DEA18BC023900F63739 /* LoginViewController.xib */,
+				DC3F934118BAE1F000744D17 /* AssignmentHeaderView.xib */,
+				108D5E0A18B14E7F00F89938 /* kumonFace.png */,
+				108D5E0818B14E3400F89938 /* kumon.png */,
+				DCFFE5C318A97DB100AAEBA5 /* AppDelegate.h */,
+				DCFFE5C418A97DB100AAEBA5 /* AppDelegate.m */,
+				DCFFE5CC18A97DB100AAEBA5 /* Images.xcassets */,
+				DCFFE5BB18A97DB100AAEBA5 /* Supporting Files */,
+			);
+			path = KumonApp;
+			sourceTree = "<group>";
+		};
+		DCFFE5BB18A97DB100AAEBA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCFFE5BC18A97DB100AAEBA5 /* KumonApp-Info.plist */,
+				DCFFE5BD18A97DB100AAEBA5 /* InfoPlist.strings */,
+				DCFFE5C018A97DB100AAEBA5 /* main.m */,
+				DCFFE5C218A97DB100AAEBA5 /* KumonApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCFFE5D918A97DB100AAEBA5 /* KumonAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCFFE5DF18A97DB100AAEBA5 /* KumonAppTests.m */,
+				DCFFE5DA18A97DB100AAEBA5 /* Supporting Files */,
+			);
+			path = KumonAppTests;
+			sourceTree = "<group>";
+		};
+		DCFFE5DA18A97DB100AAEBA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCFFE5DB18A97DB100AAEBA5 /* KumonAppTests-Info.plist */,
+				DCFFE5DC18A97DB100AAEBA5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCFFE5B018A97DB100AAEBA5 /* KumonApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCFFE5E318A97DB100AAEBA5 /* Build configuration list for PBXNativeTarget "KumonApp" */;
+			buildPhases = (
+				F833850C59344EAC8720525C /* Check Pods Manifest.lock */,
+				DCFFE5AD18A97DB100AAEBA5 /* Sources */,
+				DCFFE5AE18A97DB100AAEBA5 /* Frameworks */,
+				DCFFE5AF18A97DB100AAEBA5 /* Resources */,
+				36123D6E8861444399B732B3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KumonApp;
+			productName = KumonApp;
+			productReference = DCFFE5B118A97DB100AAEBA5 /* KumonApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCFFE5D118A97DB100AAEBA5 /* KumonAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCFFE5E618A97DB100AAEBA5 /* Build configuration list for PBXNativeTarget "KumonAppTests" */;
+			buildPhases = (
+				DCFFE5CE18A97DB100AAEBA5 /* Sources */,
+				DCFFE5CF18A97DB100AAEBA5 /* Frameworks */,
+				DCFFE5D018A97DB100AAEBA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCFFE5D818A97DB100AAEBA5 /* PBXTargetDependency */,
+			);
+			name = KumonAppTests;
+			productName = KumonAppTests;
+			productReference = DCFFE5D218A97DB100AAEBA5 /* KumonAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCFFE5A918A97DB100AAEBA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "malena mesarina";
+				TargetAttributes = {
+					DCFFE5D118A97DB100AAEBA5 = {
+						TestTargetID = DCFFE5B018A97DB100AAEBA5;
+					};
+				};
+			};
+			buildConfigurationList = DCFFE5AC18A97DB100AAEBA5 /* Build configuration list for PBXProject "KumonApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCFFE5A818A97DB100AAEBA5;
+			productRefGroup = DCFFE5B218A97DB100AAEBA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCFFE5B018A97DB100AAEBA5 /* KumonApp */,
+				DCFFE5D118A97DB100AAEBA5 /* KumonAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCFFE5AF18A97DB100AAEBA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCFFE5CD18A97DB100AAEBA5 /* Images.xcassets in Resources */,
+				DCE9B69B18B96A0400C20E6B /* MyCell.xib in Resources */,
+				DC744DEC18BC023900F63739 /* LoginViewController.xib in Resources */,
+				DCFFE5BF18A97DB100AAEBA5 /* InfoPlist.strings in Resources */,
+				DC3F934218BAE1F000744D17 /* AssignmentHeaderView.xib in Resources */,
+				DC744DF318BC06FE00F63739 /* AssignmentsTableViewController.xib in Resources */,
+				108D5E0918B14E3400F89938 /* kumon.png in Resources */,
+				DC3F933E18BA935C00744D17 /* AssignmentsAssets.xcassets in Resources */,
+				DC3F934018BADA2700744D17 /* info_20x20.png in Resources */,
+				DC16802418B7FCAC000BB982 /* LoginAssets.xcassets in Resources */,
+				108D5E0B18B14E7F00F89938 /* kumonFace.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFFE5D018A97DB100AAEBA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCFFE5DE18A97DB100AAEBA5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36123D6E8861444399B732B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F833850C59344EAC8720525C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCFFE5AD18A97DB100AAEBA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC744DF218BC06FE00F63739 /* AssignmentsTableViewController.m in Sources */,
+				DCFFE5C518A97DB100AAEBA5 /* AppDelegate.m in Sources */,
+				DCE9B69E18B96A3C00C20E6B /* MyCell.m in Sources */,
+				DCFFE5C118A97DB100AAEBA5 /* main.m in Sources */,
+				DC744DEB18BC023900F63739 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFFE5CE18A97DB100AAEBA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCFFE5E018A97DB100AAEBA5 /* KumonAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCFFE5D818A97DB100AAEBA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCFFE5B018A97DB100AAEBA5 /* KumonApp */;
+			targetProxy = DCFFE5D718A97DB100AAEBA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCFFE5BD18A97DB100AAEBA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCFFE5BE18A97DB100AAEBA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DCFFE5DC18A97DB100AAEBA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCFFE5DD18A97DB100AAEBA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCFFE5E118A97DB100AAEBA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCFFE5E218A97DB100AAEBA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCFFE5E418A97DB100AAEBA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C6291089EA4BD284615C1F /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/mmesarina/Documents/CodePath-Class/CodePath-Class-2/KumonProject/Applications/Kumon/KumonApp",
+					"/Users/mmesarina/Documents/CodePath-Class/CodePath-Class-2/KumonProject/Applications/KumonApp",
+					/Pia/ios/KumonFromZip/KumonApp,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KumonApp/KumonApp-Prefix.pch";
+				INFOPLIST_FILE = "KumonApp/KumonApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DCFFE5E518A97DB100AAEBA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C6291089EA4BD284615C1F /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/mmesarina/Documents/CodePath-Class/CodePath-Class-2/KumonProject/Applications/Kumon/KumonApp",
+					"/Users/mmesarina/Documents/CodePath-Class/CodePath-Class-2/KumonProject/Applications/KumonApp",
+					/Pia/ios/KumonFromZip/KumonApp,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KumonApp/KumonApp-Prefix.pch";
+				INFOPLIST_FILE = "KumonApp/KumonApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DCFFE5E718A97DB100AAEBA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KumonApp.app/KumonApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KumonApp/KumonApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KumonAppTests/KumonAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DCFFE5E818A97DB100AAEBA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KumonApp.app/KumonApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KumonApp/KumonApp-Prefix.pch";
+				INFOPLIST_FILE = "KumonAppTests/KumonAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCFFE5AC18A97DB100AAEBA5 /* Build configuration list for PBXProject "KumonApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCFFE5E118A97DB100AAEBA5 /* Debug */,
+				DCFFE5E218A97DB100AAEBA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCFFE5E318A97DB100AAEBA5 /* Build configuration list for PBXNativeTarget "KumonApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCFFE5E418A97DB100AAEBA5 /* Debug */,
+				DCFFE5E518A97DB100AAEBA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCFFE5E618A97DB100AAEBA5 /* Build configuration list for PBXNativeTarget "KumonAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCFFE5E718A97DB100AAEBA5 /* Debug */,
+				DCFFE5E818A97DB100AAEBA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCFFE5A918A97DB100AAEBA5 /* Project object */;
+}
