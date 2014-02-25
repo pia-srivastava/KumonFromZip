@@ -89,31 +89,90 @@
 
 
 
+//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+//	
+//	if (textField.tag == 1) {
+//		self.NameText = (UITextField*)[self.view viewWithTag:1];
+//		
+//	}
+//	
+//	// Check if userName and password is in the Parser DB
+//	if (textField.tag == 2) { // if password was entered
+//		self.PasswordText = (UITextField*) [self.view viewWithTag:2];
+//		PFQuery *query = [PFQuery queryWithClassName:@"Student"];
+//		[query whereKey:@"Username" equalTo:self.NameText.text];
+//		[query whereKey:@"Password" equalTo:self.PasswordText.text];
+//		[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//			if (!error) {
+//				//Success in finding user
+//				NSLog(@"User was found. OBject count = %d", objects.count);
+//			} else {
+//				// Ned to think abou
+//				NSLog(@"Username is not in DB");
+//				
+//			}
+//		}];
+//	}
+//	
+//	
+//	return YES;
+//}
+
+// Method is called when Textfield has been asked to reisgn first responder status.
+// This happens when user changes editing focus to another control.
+// You can use this method to prompt user that text entered was invalid via an overlay view
+// and ask to correct text
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
 	
 	if (textField.tag == 1) {
 		self.NameText = (UITextField*)[self.view viewWithTag:1];
 		
 	}
-	
-	// Check if userName and password is in the Parser DB
-	if (textField.tag == 2) { // if password was entered
-		self.PasswordText = (UITextField*) [self.view viewWithTag:2];
-		PFQuery *query = [PFQuery queryWithClassName:@"Student"];
-		[query whereKey:@"Username" equalTo:self.NameText.text];
-		[query whereKey:@"Password" equalTo:self.PasswordText.text];
-		[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-			if (!error) {
-				//Success in finding user
-				NSLog(@"User was found. OBject count = %d", objects.count);
-			} else {
-				// Ned to think abou
-				NSLog(@"Username is not in DB");
-				
-			}
-		}];
-	}
-	
+    if (textField.tag == 2) {
+        self.PasswordText = (UITextField*) [self.view viewWithTag:2];
+    }
+    
+    //For debugging--gets back all the data within a class name
+    //    PFQuery *query = [PFQuery queryWithClassName:@"Student"];
+    //    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    //        if (!error) {
+    //            NSLog(@"Objects: [%@]", objects);
+    //            for (NSString *object in objects) {
+    //                //[array valueForKey:specifyingKey]
+    //                NSLog(@"username is [%@]",[objects valueForKey:@"UserName"]);
+    //                NSLog(@"password is [%@]",[objects valueForKey:@"Password"]);
+    //            }
+    //            // The find succeeded. The first 100 objects are available in objects
+    //        } else {
+    //            // Log details of the failure
+    //            NSLog(@"Error: %@ %@", error, [error userInfo]);
+    //        }
+    //    }];
+    
+    
+    //	NSLog(@"self.NameText.text is %@", self.NameText.text);
+    //   	NSLog(@"self.PasswordText.text is %@", self.PasswordText.text);
+    //
+    //	// Check if userName and password is in the Parser DB
+    //	if (textField.tag == 2) { // if password was entered
+    //		self.PasswordText = (UITextField*) [self.view viewWithTag:2];
+    //		PFQuery *query = [PFQuery queryWithClassName:@"Student"];
+    //		[query whereKey:@"UserName" equalTo:self.NameText.text];
+    //		[query whereKey:@"Password" equalTo:self.PasswordText.text];
+    //		[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    //			if (!error && objects && objects.count == 1) {
+    //				//Success in finding user
+    //                NSLog(@"ObjectsAgain: [%@]", objects);
+    //				NSLog(@"User was found. OBject count = %d", objects.count);
+    //			} else {
+    //				// Ned to think about what to do if invalid username/password
+    //				NSLog(@"Username is not in DB");
+    //
+    //
+    //			}
+    //		}];
+    //	}
+    //
 	
 	return YES;
 }
@@ -147,16 +206,52 @@
 
 #pragma - Button function
 
-
-
-- (IBAction)loginButtonAction:(UIButton *)sender {
+- (IBAction)onLoginButton:(id)sender {
+    
+    NSLog(@"onLoginButton!!!") ;
+    NSString *nameEntered = self.NameText.text;
+    NSString *passwordEntered = self.PasswordText.text;
+    
+    NSLog(@"self.NameText.text is %@", nameEntered);
+   	NSLog(@"self.PasswordText.text is %@", passwordEntered);
+    
+	// Check if userName and password is in the Parser DB
+    
+    if(nameEntered !=nil && passwordEntered !=nil){
+        PFQuery *query = [PFQuery queryWithClassName:@"Student"];
+        [query whereKey:@"UserName" equalTo:self.NameText.text];
+        [query whereKey:@"Password" equalTo:self.PasswordText.text];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error && objects && objects.count == 1) {
+                //Success in finding user
+                NSLog(@"ObjectsAgain: [%@]", objects);
+                NSLog(@"User was found. OBject count = %d", objects.count);
+                //                [self performSegueWithIdentifier:@"showAssignmentsTableSegue"];
+                AssignmentsTableViewController *assignmentsVC = [[AssignmentsTableViewController alloc] init];
+                [self presentViewController:assignmentsVC animated:YES completion:NULL];
+            } else {
+                // Need to think about what to do if invalid username/password
+                NSLog(@"Username is not in DB");
+                
+                
+            }
+        }];
+        
+    }
+    else{
+        NSLog(@"Invalid name/password!");
+    }
 	
-	NSLog(@"In loginButtonAction");
-	AssignmentsTableViewController *assignmentsTableViewController = [[AssignmentsTableViewController alloc]initWithNibName:@"AssignmentsTableViewController" bundle:nil];
-	
-	[self.navigationController pushViewController:assignmentsTableViewController animated:YES];
-	
-	
-
 }
+
+//- (IBAction)loginButtonAction:(UIButton *)sender {
+//	
+//	NSLog(@"In loginButtonAction");
+//	AssignmentsTableViewController *assignmentsTableViewController = [[AssignmentsTableViewController alloc]initWithNibName:@"AssignmentsTableViewController" bundle:nil];
+//	
+//	[self.navigationController pushViewController:assignmentsTableViewController animated:YES];
+//	
+//	
+//
+//}
 @end
