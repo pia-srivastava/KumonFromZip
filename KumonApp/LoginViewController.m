@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "AssignmentsTableViewController.h"
+#import "B49ViewController.h"
 #import <Parse/Parse.h>
 
 @interface LoginViewController ()
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *nameArea;
 @property (weak, nonatomic) IBOutlet UIImageView *passwordArea;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+- (IBAction)onB49Button:(id)sender;
 
 @end
 
@@ -228,7 +230,6 @@
                 //Success in finding user
                 NSLog(@"ObjectsAgain: [%@]", objects);
                 NSLog(@"User was found. OBject count = %d", objects.count);
-                //                [self performSegueWithIdentifier:@"showAssignmentsTableSegue"];
                 AssignmentsTableViewController *assignmentsVC = [[AssignmentsTableViewController alloc] init];
                 [self presentViewController:assignmentsVC animated:YES completion:NULL];
             } else {
@@ -327,4 +328,8 @@
 //	
 //
 //}
+- (IBAction)onB49Button:(id)sender {
+    B49ViewController *b49VC = [[B49ViewController alloc] init];
+    [self presentViewController:b49VC animated:YES completion:NULL];
+}
 @end
