@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="B49ViewController">
             <connections>
+                <outlet property="rightOrWrongImage" destination="KA7-6q-xZH" id="tDU-fc-yhM"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -14,13 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_background" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-VS-Yu3">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_background" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-VS-Yu3">
                     <rect key="frame" x="0.0" y="-37" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_back_button" translatesAutoresizingMaskIntoConstraints="NO" id="Ca5-kU-8sR">
-                    <rect key="frame" x="20" y="5" width="56" height="64"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_score_head" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-SJ-ppv">
                     <rect key="frame" x="244" y="9" width="44" height="55"/>
@@ -30,13 +27,24 @@
                     <rect key="frame" x="82" y="-32" width="159" height="92"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_40" translatesAutoresizingMaskIntoConstraints="NO" id="wnI-n3-yV2">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_40" translatesAutoresizingMaskIntoConstraints="NO" id="wnI-n3-yV2">
                     <rect key="frame" x="82" y="128" width="70" height="61"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="F7j-xw-Ugo" appends="YES" id="TeH-wG-dsz"/>
+                    </connections>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_30" translatesAutoresizingMaskIntoConstraints="NO" id="gQz-rZ-pW1">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_30" translatesAutoresizingMaskIntoConstraints="NO" id="gQz-rZ-pW1">
                     <rect key="frame" x="165" y="131" width="70" height="61"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" none="YES" image="YES" playsSound="YES"/>
+                    </accessibility>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="eAp-m7-FRi" appends="YES" id="a2G-xf-Yrb"/>
+                    </connections>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_19" translatesAutoresizingMaskIntoConstraints="NO" id="ezy-7B-OyY">
                     <rect key="frame" x="171" y="414" width="70" height="61"/>
@@ -49,6 +57,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_82" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-oL-f7m">
                     <rect key="frame" x="171" y="226" width="70" height="61"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Wpa-Gq-Rgj" appends="YES" id="ga3-hk-LPK"/>
+                    </connections>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_number_28" translatesAutoresizingMaskIntoConstraints="NO" id="nh8-c7-dNV">
                     <rect key="frame" x="87" y="226" width="70" height="61"/>
@@ -63,13 +75,35 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b49_correct_mark" translatesAutoresizingMaskIntoConstraints="NO" id="KA7-6q-xZH">
-                    <rect key="frame" x="213" y="107" width="55" height="55"/>
+                    <rect key="frame" x="223" y="109" width="55" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zm-bWa">
+                    <rect key="frame" x="6" y="0.0" width="68" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="b49_back_button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBackButton:" destination="-1" eventType="touchUpInside" id="FEJ-hZ-Bw0"/>
+                    </connections>
+                </button>
             </subviews>
+            <gestureRecognizers/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="F7j-xw-Ugo">
+            <connections>
+                <action selector="onTap40:" destination="-1" id="dHP-mf-sc2"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="eAp-m7-FRi">
+            <connections>
+                <action selector="onTap30:" destination="-1" id="nHQ-jB-Pn5"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="Wpa-Gq-Rgj"/>
     </objects>
     <resources>
         <image name="b49_back_button" width="45" height="51"/>
