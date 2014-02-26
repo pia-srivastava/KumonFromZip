@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface B49ViewController : UIViewController
-
+@property (strong) AVAudioPlayer * myPlayer;
 @end
