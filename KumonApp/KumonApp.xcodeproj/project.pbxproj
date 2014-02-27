@@ -22,14 +22,18 @@
 		108D5E0B18B14E7F00F89938 /* kumonFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 108D5E0A18B14E7F00F89938 /* kumonFace.png */; };
 		DC16802018B7FA8A000BB982 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC16801F18B7FA8A000BB982 /* FacebookSDK.framework */; };
 		DC16802418B7FCAC000BB982 /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC16802318B7FCAC000BB982 /* LoginAssets.xcassets */; };
-		DC3F933E18BA935C00744D17 /* AssignmentsAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3F933D18BA935C00744D17 /* AssignmentsAssets.xcassets */; };
 		DC3F934018BADA2700744D17 /* info_20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3F933F18BADA2700744D17 /* info_20x20.png */; };
 		DC3F934218BAE1F000744D17 /* AssignmentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3F934118BAE1F000744D17 /* AssignmentHeaderView.xib */; };
 		DC744DEB18BC023900F63739 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC744DE918BC023900F63739 /* LoginViewController.m */; };
 		DC744DEC18BC023900F63739 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC744DEA18BC023900F63739 /* LoginViewController.xib */; };
 		DC744DEE18BC032A00F63739 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC744DED18BC032A00F63739 /* Parse.framework */; };
-		DC744DF218BC06FE00F63739 /* AssignmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC744DF018BC06FE00F63739 /* AssignmentsTableViewController.m */; };
-		DC744DF318BC06FE00F63739 /* AssignmentsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC744DF118BC06FE00F63739 /* AssignmentsTableViewController.xib */; };
+		DCB7518418BEFC3D007B6E3B /* B49ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB7518218BEFC3D007B6E3B /* B49ViewController.m */; };
+		DCB7518518BEFC3D007B6E3B /* B49ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB7518318BEFC3D007B6E3B /* B49ViewController.xib */; };
+		DCB7518E18BF0C1B007B6E3B /* AssignmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB7518C18BF0C1B007B6E3B /* AssignmentsTableViewController.m */; };
+		DCB7518F18BF0C1B007B6E3B /* AssignmentsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB7518D18BF0C1B007B6E3B /* AssignmentsTableViewController.xib */; };
+		DCB751A318BF8183007B6E3B /* AssignmentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB751A218BF8183007B6E3B /* AssignmentHeaderView.m */; };
+		DCB751A518BF84E3007B6E3B /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB751A418BF84E3007B6E3B /* HeaderView.xib */; };
+		DCB751A718BF87E1007B6E3B /* AssignmentsAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB751A618BF87E1007B6E3B /* AssignmentsAssets.xcassets */; };
 		DCE9B69B18B96A0400C20E6B /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE9B69A18B96A0400C20E6B /* MyCell.xib */; };
 		DCE9B69E18B96A3C00C20E6B /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE9B69D18B96A3C00C20E6B /* MyCell.m */; };
 		DCFFE5B518A97DB100AAEBA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFFE5B418A97DB100AAEBA5 /* Foundation.framework */; };
@@ -73,16 +77,22 @@
 		D8731EEC32584D738E5EFC1D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC16801F18B7FA8A000BB982 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DC16802318B7FCAC000BB982 /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
-		DC3F933D18BA935C00744D17 /* AssignmentsAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssignmentsAssets.xcassets; sourceTree = "<group>"; };
 		DC3F933F18BADA2700744D17 /* info_20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_20x20.png; path = KumonApp/info_20x20.png; sourceTree = "<group>"; };
 		DC3F934118BAE1F000744D17 /* AssignmentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentHeaderView.xib; sourceTree = "<group>"; };
 		DC744DE818BC023900F63739 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		DC744DE918BC023900F63739 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		DC744DEA18BC023900F63739 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
 		DC744DED18BC032A00F63739 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		DC744DEF18BC06FE00F63739 /* AssignmentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssignmentsTableViewController.h; path = ../AssignmentsTableViewController.h; sourceTree = "<group>"; };
-		DC744DF018BC06FE00F63739 /* AssignmentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssignmentsTableViewController.m; path = ../AssignmentsTableViewController.m; sourceTree = "<group>"; };
-		DC744DF118BC06FE00F63739 /* AssignmentsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AssignmentsTableViewController.xib; path = ../AssignmentsTableViewController.xib; sourceTree = "<group>"; };
+		DCB7518118BEFC22007B6E3B /* B49ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = B49ViewController.h; path = KumonApp/B49ViewController.h; sourceTree = "<group>"; };
+		DCB7518218BEFC3D007B6E3B /* B49ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = B49ViewController.m; path = KumonApp/B49ViewController.m; sourceTree = "<group>"; };
+		DCB7518318BEFC3D007B6E3B /* B49ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = B49ViewController.xib; path = KumonApp/B49ViewController.xib; sourceTree = "<group>"; };
+		DCB7518B18BF0C1B007B6E3B /* AssignmentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentsTableViewController.h; sourceTree = "<group>"; };
+		DCB7518C18BF0C1B007B6E3B /* AssignmentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentsTableViewController.m; sourceTree = "<group>"; };
+		DCB7518D18BF0C1B007B6E3B /* AssignmentsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssignmentsTableViewController.xib; sourceTree = "<group>"; };
+		DCB751A118BF8183007B6E3B /* AssignmentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentHeaderView.h; sourceTree = "<group>"; };
+		DCB751A218BF8183007B6E3B /* AssignmentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentHeaderView.m; sourceTree = "<group>"; };
+		DCB751A418BF84E3007B6E3B /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		DCB751A618BF87E1007B6E3B /* AssignmentsAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssignmentsAssets.xcassets; sourceTree = "<group>"; };
 		DCE9B69A18B96A0400C20E6B /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		DCE9B69C18B96A3C00C20E6B /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		DCE9B69D18B96A3C00C20E6B /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
@@ -144,9 +154,18 @@
 		DCFFE5A818A97DB100AAEBA5 = {
 			isa = PBXGroup;
 			children = (
+				DCB751A618BF87E1007B6E3B /* AssignmentsAssets.xcassets */,
+				DCB751A418BF84E3007B6E3B /* HeaderView.xib */,
+				DCB751A118BF8183007B6E3B /* AssignmentHeaderView.h */,
+				DCB751A218BF8183007B6E3B /* AssignmentHeaderView.m */,
+				DCB7518B18BF0C1B007B6E3B /* AssignmentsTableViewController.h */,
+				DCB7518C18BF0C1B007B6E3B /* AssignmentsTableViewController.m */,
+				DCB7518D18BF0C1B007B6E3B /* AssignmentsTableViewController.xib */,
+				DCB7518218BEFC3D007B6E3B /* B49ViewController.m */,
+				DCB7518318BEFC3D007B6E3B /* B49ViewController.xib */,
+				DCB7518118BEFC22007B6E3B /* B49ViewController.h */,
 				103FE7BE18BC3DA3007ABC53 /* Parse.framework */,
 				DC3F933F18BADA2700744D17 /* info_20x20.png */,
-				DC3F933D18BA935C00744D17 /* AssignmentsAssets.xcassets */,
 				DCE9B69C18B96A3C00C20E6B /* MyCell.h */,
 				DCE9B69D18B96A3C00C20E6B /* MyCell.m */,
 				DCE9B69A18B96A0400C20E6B /* MyCell.xib */,
@@ -194,9 +213,6 @@
 		DCFFE5BA18A97DB100AAEBA5 /* KumonApp */ = {
 			isa = PBXGroup;
 			children = (
-				DC744DEF18BC06FE00F63739 /* AssignmentsTableViewController.h */,
-				DC744DF018BC06FE00F63739 /* AssignmentsTableViewController.m */,
-				DC744DF118BC06FE00F63739 /* AssignmentsTableViewController.xib */,
 				DC744DE818BC023900F63739 /* LoginViewController.h */,
 				DC744DE918BC023900F63739 /* LoginViewController.m */,
 				DC744DEA18BC023900F63739 /* LoginViewController.xib */,
@@ -318,14 +334,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB751A518BF84E3007B6E3B /* HeaderView.xib in Resources */,
 				DCFFE5CD18A97DB100AAEBA5 /* Images.xcassets in Resources */,
 				DCE9B69B18B96A0400C20E6B /* MyCell.xib in Resources */,
 				DC744DEC18BC023900F63739 /* LoginViewController.xib in Resources */,
 				DCFFE5BF18A97DB100AAEBA5 /* InfoPlist.strings in Resources */,
+				DCB7518518BEFC3D007B6E3B /* B49ViewController.xib in Resources */,
+				DCB7518F18BF0C1B007B6E3B /* AssignmentsTableViewController.xib in Resources */,
 				DC3F934218BAE1F000744D17 /* AssignmentHeaderView.xib in Resources */,
-				DC744DF318BC06FE00F63739 /* AssignmentsTableViewController.xib in Resources */,
+				DCB751A718BF87E1007B6E3B /* AssignmentsAssets.xcassets in Resources */,
 				108D5E0918B14E3400F89938 /* kumon.png in Resources */,
-				DC3F933E18BA935C00744D17 /* AssignmentsAssets.xcassets in Resources */,
 				DC3F934018BADA2700744D17 /* info_20x20.png in Resources */,
 				DC16802418B7FCAC000BB982 /* LoginAssets.xcassets in Resources */,
 				108D5E0B18B14E7F00F89938 /* kumonFace.png in Resources */,
@@ -380,11 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC744DF218BC06FE00F63739 /* AssignmentsTableViewController.m in Sources */,
 				DCFFE5C518A97DB100AAEBA5 /* AppDelegate.m in Sources */,
+				DCB7518418BEFC3D007B6E3B /* B49ViewController.m in Sources */,
 				DCE9B69E18B96A3C00C20E6B /* MyCell.m in Sources */,
 				DCFFE5C118A97DB100AAEBA5 /* main.m in Sources */,
 				DC744DEB18BC023900F63739 /* LoginViewController.m in Sources */,
+				DCB7518E18BF0C1B007B6E3B /* AssignmentsTableViewController.m in Sources */,
+				DCB751A318BF8183007B6E3B /* AssignmentHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

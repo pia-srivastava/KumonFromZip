@@ -95,12 +95,12 @@
 
 
 //- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-//	
+//
 //	if (textField.tag == 1) {
 //		self.NameText = (UITextField*)[self.view viewWithTag:1];
-//		
+//
 //	}
-//	
+//
 //	// Check if userName and password is in the Parser DB
 //	if (textField.tag == 2) { // if password was entered
 //		self.PasswordText = (UITextField*) [self.view viewWithTag:2];
@@ -114,12 +114,12 @@
 //			} else {
 //				// Ned to think abou
 //				NSLog(@"Username is not in DB");
-//				
+//
 //			}
 //		}];
 //	}
-//	
-//	
+//
+//
 //	return YES;
 //}
 
@@ -319,13 +319,13 @@
 }
 
 //- (IBAction)loginButtonAction:(UIButton *)sender {
-//	
+//
 //	NSLog(@"In loginButtonAction");
 //	AssignmentsTableViewController *assignmentsTableViewController = [[AssignmentsTableViewController alloc]initWithNibName:@"AssignmentsTableViewController" bundle:nil];
-//	
+//
 //	[self.navigationController pushViewController:assignmentsTableViewController animated:YES];
-//	
-//	
+//
+//
 //
 //}
 - (IBAction)onB49Button:(id)sender {

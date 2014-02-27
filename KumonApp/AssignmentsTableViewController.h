@@ -10,6 +10,10 @@
 
 @interface AssignmentsTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) NSString *studentUserName;
+@property (nonatomic, strong) NSString *studentName;
+
+
 
 
 @end

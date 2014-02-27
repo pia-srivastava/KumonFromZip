@@ -7,6 +7,8 @@
 //
 
 #import "AssignmentsTableViewController.h"
+#import "AssignmentHeaderView.h"
+
 #import "MyCell.h"
 #import <Parse/Parse.h>
 
@@ -25,7 +27,8 @@
 @interface AssignmentsTableViewController ()
 
 @property (strong, nonatomic) NSMutableDictionary *assignmentsNamesToImagesDic;
-@property (nonatomic, strong) NSString *studentUserName;
+@property (strong, nonatomic) NSMutableDictionary *assignmentsNamesToScoreImagesDic;
+
 
 @property (nonatomic, strong) NSMutableArray *AssignmentsArray;
 @property (nonatomic, strong) NSMutableDictionary *CheckMarksDic;
@@ -55,18 +58,15 @@
 {
     [super viewDidLoad];
 	
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-	
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Load header section custom view
+	[self.tableView registerNib:[UINib nibWithNibName:@"HeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:@"HeaderView"];
 	
 	//For testing ....
 	
 	self.AssignmentsArray = [[NSMutableArray alloc] init];
 	self.CheckMarksDic = [[NSMutableDictionary alloc] init];
 	
-	self.studentUserName = @"mmesarina";
+	//self.studentUserName = @"mmesarina";
 	
 	
 	
@@ -77,8 +77,8 @@
 	//[self.navigationController.navigationBar setBackgroundImage:[@"levels_header.png" ] forBarMetrics:UIBarMetricsDefault]];
 	//[self.navigationController.navigationBar setBackgroundImage:@"levels_header.png" forBarMetrics:UIBarMetricsDefault];
 	
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed: @"levels_header.png"]
-												  forBarMetrics:UIBarMetricsDefault];
+	/*[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed: @"levels_header.png"] forBarMetrics:UIBarMetricsDefault];
+	 */
 	
 	// SET TITLE IMAGE
 	
@@ -124,8 +124,11 @@
 	
 	
 	
-	// Load the Assignments dictionary mapping assignment key to assignment PNG name
+	// Load the Assignments dictionary mapping assignment Parse name to assignment PNG name
 	self.assignmentsNamesToImagesDic = (NSMutableDictionary*) @{@"B46":@"levels_b46.png", @"B47":@"levels_b47.png", @"B48":@"levels_b48.png", @"B49":@"levels_b49.png"};
+	
+	// Map assignment  name field (in Parse) to images of scores
+	self.assignmentsNamesToScoreImagesDic = (NSMutableDictionary*)  @{@"B46":@"levels_score_01.png", @"B47":@"levels_score_02.png", @"B48":@"levels_score_03_04.png", @"B49":@"levels_score_03_04.png"};
 	
 	// Later .... read the assignments from Parse assigned to this student.
 	[self GetAssignments];
@@ -243,12 +246,123 @@
 
 
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+	// ***** NEED TO CHANGE HARDCODING FOR DYNAMIC INFO
+	
+	NSLog(@"Inside viewForHeaderSection");
+	AssignmentHeaderView *headerView = [self.tableView dequeueReusableHeaderFooterViewWithIdentifier:@"HeaderView"];
+    
+	
+	
+	NSString *firstString = self.studentName;
+	NSString *secString = @"'s";
+	NSString *studString = [firstString stringByAppendingString:secString];
+	
+	
+	headerView.studentNameLabel.text = studString;
+	
+	
+	// Check Done status of assignment in order to set the
+	// appropiate score heads
+	
+	int i;
+	for ( i =0; i < self.AssignmentsArray.count ; i++) {
+		// Get assignment name
+		NSString *assignment = self.AssignmentsArray[i];
+		// Find its doen status
+		NSString *doneStatus = self.CheckMarksDic[assignment];
+		if ( [doneStatus isEqualToString:@"YES"]) {
+			
+			/* THE WAY IT SHOULD WORK WITH IBOUTLETS FOR UIVIEWS */
+			/*
+			UIImage *scoreImage = [UIImage imageNamed:self.assignmentsNamesToScoreImagesDic[assignment]];
+	
+			UIImageView *scoreImageView = [[UIImageView alloc] initWithImage:scoreImage];
+			headerView.score1ImageView = scoreImageView;
+			 */
+			
+			/* ALTERNATIVE WITH VIEWTAGS */
+			
+			UIImageView *scoreImageView = [[UIImageView alloc] init];
+			int tagIndex = i+1;
+			scoreImageView = (UIImageView*)[headerView viewWithTag:tagIndex ];
+			UIImage *scoreImage = [UIImage imageNamed:self.assignmentsNamesToScoreImagesDic[assignment]];
+			
+			scoreImageView.image = scoreImage;
+			
+			
+			
+								   
+			
+		} else if ([doneStatus isEqualToString:@"NO"]) {
+			NSLog(@"doneStatus was NO");
+			NSLog(@"i = %d", i) ;
+			
+		}
+		
+	}
+	
+		
+		
+	 return headerView;
+	
 
-//- (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+	
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+	NSLog(@"Inside heightForHeaderInSection");
+	// Calculate height fo UIView
+	CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat width = screenRect.size.width;
+    width -= 64;
+	
+	//GET HEIGHT OF NAME LABEL
+	UILabel *nameLabel = [[UILabel alloc] init];
+	
+	[nameLabel setAttributedText:[[NSAttributedString alloc] initWithString:@"Katherine's"]];
+	CGRect nameRect = [nameLabel.text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+												   options:NSStringDrawingUsesLineFragmentOrigin
+												attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}
+												   context:nil];
+	
+	
+	// Get HEIGHT OF SCORE LABEL:
+	
+	UILabel *scoreLabel = [[UILabel alloc] init];
+	[scoreLabel setAttributedText:[[NSAttributedString alloc] initWithString:@"score"]];
+	CGRect scoreLabelRect = [scoreLabel.text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+												   options:NSStringDrawingUsesLineFragmentOrigin
+												attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}
+												   context:nil];
+		
+	
+	// GET THE HEIGHT OF SCORE IMAGE HEIGHT
+	
+	UIImage *scoreImage = [UIImage imageNamed:@"levels_score_01.png"];
+	CGFloat scoreImageHeight = scoreImage.size.height;
+	
+	
+	CGFloat h = nameRect.size.height + scoreLabelRect.size.height + scoreImageHeight + 7 + 8 + 10;
+	
+	return h;
+	
+
+	
+}
 
 
-//}
 
+- (NSIndexPath*) tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	
+	// *** FILL OUT LATER AFTER CREATING THE OPERATIONS PAGE
+	//[self.navigationController pushViewController:detailViewController animated:YES];
+	
+	
+	return indexPath;
+}
 
 
 - (void) GetAssignments {
