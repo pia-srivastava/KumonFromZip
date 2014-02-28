@@ -11,11 +11,23 @@
 
 @interface B49ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
-@property (weak, nonatomic) IBOutlet UIImageView *rightOrWrongImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *rightOrWrongImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *rightOrWrongImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *rightOrWrongImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *rightOrWrongImage4;
 
 - (IBAction)onBackButton:(id)sender;
 - (IBAction)onTap30:(UITapGestureRecognizer *)sender;
 - (IBAction)onTap40:(UITapGestureRecognizer *)sender;
+- (IBAction)onTap82:(UITapGestureRecognizer *)sender;
+- (IBAction)onTap28:(UITapGestureRecognizer *)sender;
+- (IBAction)onTap90:(UITapGestureRecognizer *)sender;
+- (IBAction)onTap53:(UITapGestureRecognizer *)sender;
+- (IBAction)onTap24:(UITapGestureRecognizer *)sender;
+- (IBAction)onTap19:(UITapGestureRecognizer *)sender;
+
+-(void)showHearRightWrong:(UIImageView *)rightOrWrongImage soundFile:(NSString *)nameOfSoundFile rightOrWrong:(NSString *)rightOrWrong;
 
 @end
 
@@ -45,7 +57,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.myPlayer = [self loadWav:@"UhOh_Anya"];
+    self.rightOrWrongImage1.alpha = 0;
+    self.rightOrWrongImage2.alpha = 0;
+    self.rightOrWrongImage3.alpha = 0;
+    self.rightOrWrongImage4.alpha = 0;
+    self.myPlayer = [self loadWav:@"NotQuite_Anya"];
+    self.myPlayer = [self loadWav:@"DontGiveUp_Avik"];
+    self.myPlayer = [self loadWav:@"UhOh_Avik"];
+    
+    self.myPlayer = [self loadWav:@"Superb_Avik"];
+    self.myPlayer = [self loadWav:@"Terrific_Anya"];
+    self.myPlayer = [self loadWav:@"Wonderful_Anya"];
+    
 }
 
 
@@ -62,11 +85,50 @@
 }
 
 - (IBAction)onTap30:(UITapGestureRecognizer *)sender {
-    self.rightOrWrongImage.image = [UIImage imageNamed:@"b49_wrong_mark"];
-    [self.myPlayer play];
+    [self showHearRightWrong:self.rightOrWrongImage1 soundFile:@"UhOh_Anya" rightOrWrong:@"wrong"];
 }
 
 - (IBAction)onTap40:(UITapGestureRecognizer *)sender {
-    self.rightOrWrongImage.image = [UIImage imageNamed:@"b49_correct_mark"];
+    [self showHearRightWrong:self.rightOrWrongImage1 soundFile:@"Awesome_Avik" rightOrWrong:@"right"];
 }
+
+- (IBAction)onTap82:(UITapGestureRecognizer *)sender {
+    [self showHearRightWrong:self.rightOrWrongImage2 soundFile:@"GoodJob_Avik" rightOrWrong:@"right"];
+}
+
+- (IBAction)onTap90:(UITapGestureRecognizer *)sender {
+    [self showHearRightWrong:self.rightOrWrongImage3 soundFile:@"Superb_Avik" rightOrWrong:@"right"];
+}
+
+- (IBAction)onTap53:(UITapGestureRecognizer *)sender {
+    [self showHearRightWrong:self.rightOrWrongImage3 soundFile:@"DontGiveUp_Avik" rightOrWrong:@"wrong"];
+}
+
+- (IBAction)onTap19:(UITapGestureRecognizer *)sender {
+    [self showHearRightWrong:self.rightOrWrongImage4 soundFile:@"NiceTry_Avik" rightOrWrong:@"wrong"];
+}
+
+- (IBAction)onTap24:(UITapGestureRecognizer *)sender {
+    [self showHearRightWrong:self.rightOrWrongImage4 soundFile:@"Terrific_Anya" rightOrWrong:@"right"];
+}
+
+- (IBAction)onTap28:(UITapGestureRecognizer *)sender {
+    [self showHearRightWrong:self.rightOrWrongImage2 soundFile:@"NotQuite_Anya" rightOrWrong:@"wrong"];
+}
+
+
+-(void)showHearRightWrong:(UIImageView *)rightOrWrongImage soundFile:(NSString *)nameOfSoundFile rightOrWrong:(NSString *)rightOrWrong{
+    rightOrWrongImage.alpha = 1;
+    NSString *imageToShow;
+    if([rightOrWrong isEqualToString:@"wrong"]){
+        imageToShow = @"b49_wrong_mark";
+    }
+    else{
+        imageToShow = @"b49_correct_mark";
+    }
+    rightOrWrongImage.image = [UIImage imageNamed:imageToShow];
+    self.myPlayer = [self loadWav:nameOfSoundFile];
+    [self.myPlayer play];
+}
+
 @end
