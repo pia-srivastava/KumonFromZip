@@ -57,18 +57,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.hidden = YES;
+
     self.rightOrWrongImage1.alpha = 0;
     self.rightOrWrongImage2.alpha = 0;
     self.rightOrWrongImage3.alpha = 0;
     self.rightOrWrongImage4.alpha = 0;
-    self.myPlayer = [self loadWav:@"NotQuite_Anya"];
-    self.myPlayer = [self loadWav:@"DontGiveUp_Avik"];
-    self.myPlayer = [self loadWav:@"UhOh_Avik"];
-    
-    self.myPlayer = [self loadWav:@"Superb_Avik"];
-    self.myPlayer = [self loadWav:@"Terrific_Anya"];
-    self.myPlayer = [self loadWav:@"Wonderful_Anya"];
-    
 }
 
 
@@ -80,8 +75,15 @@
 - (IBAction)onBackButton:(id)sender {
     NSLog(@"onBackButton");
     
+    //TODO make this work with nav controller! Pia
+//    assignmentsVC.studentUserName = self.NameText.text;
+//    assignmentsVC.studentName = objects[0][@"FirstName"];
+//    [self.navigationController pushViewController:assignmentsVC animated:YES];
+
+    
     AssignmentsTableViewController *assignmentsVC = [[AssignmentsTableViewController alloc] init];
     [self presentViewController:assignmentsVC animated:YES completion:NULL];
+//    [self.navigationController popViewControllerAnimated:true];
 }
 
 - (IBAction)onTap30:(UITapGestureRecognizer *)sender {
@@ -127,8 +129,14 @@
         imageToShow = @"b49_correct_mark";
     }
     rightOrWrongImage.image = [UIImage imageNamed:imageToShow];
-    self.myPlayer = [self loadWav:nameOfSoundFile];
-    [self.myPlayer play];
+    
+    //First check if they even want to hear sound!
+    NSString *sound = [[NSUserDefaults standardUserDefaults] objectForKey:@"sound"];
+    NSLog(@"sound coming in is [%@]", sound);
+    if([sound isEqualToString:@"on"]){
+        self.myPlayer = [self loadWav:nameOfSoundFile];
+        [self.myPlayer play];
+    }
 }
 
 @end

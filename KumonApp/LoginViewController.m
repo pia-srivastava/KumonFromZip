@@ -11,6 +11,7 @@
 #import "B49ViewController.h"
 #import <Parse/Parse.h>
 #import "LevelClearedViewController.h"
+#import "SettingsViewController.h"
 
 @interface LoginViewController ()
 @property (nonatomic, strong) UITextField *NameText;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)onB49Button:(id)sender;
 - (IBAction)onLevelClearedButton:(id)sender;
+- (IBAction)onSettingsButton:(id)sender;
 
 @end
 
@@ -141,8 +143,11 @@
                 //Success in finding user
                 NSLog(@"ObjectsAgain: [%@]", objects);
                 NSLog(@"User was found. OBject count = %d", objects.count);
+                
                 AssignmentsTableViewController *assignmentsVC = [[AssignmentsTableViewController alloc] init];
-                [self presentViewController:assignmentsVC animated:YES completion:NULL];
+                assignmentsVC.studentUserName = self.NameText.text;
+                assignmentsVC.studentName = objects[0][@"FirstName"];
+                [self.navigationController pushViewController:assignmentsVC animated:YES];
             } else {
                 //TODO Need to think about what to do if invalid username/password
                 NSLog(@"Username is not in DB");
@@ -237,6 +242,12 @@
 - (IBAction)onLevelClearedButton:(id)sender {
     LevelClearedViewController *levelClearedVC = [[LevelClearedViewController alloc] init];
     [self presentViewController:levelClearedVC animated:YES completion:NULL];
+    
+}
+
+- (IBAction)onSettingsButton:(id)sender {
+    SettingsViewController *settingsClearedVC = [[SettingsViewController alloc] init];
+    [self presentViewController:settingsClearedVC animated:YES completion:NULL];
     
 }
 @end

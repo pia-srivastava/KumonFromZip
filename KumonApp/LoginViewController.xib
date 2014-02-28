@@ -78,6 +78,16 @@
                                 <action selector="onLevelClearedButton:" destination="-1" eventType="touchUpInside" id="ekN-NX-dkb"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAn-b0-oNv">
+                            <rect key="frame" x="48" y="496" width="57" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Settings">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onSettingsButton:" destination="-1" eventType="touchUpInside" id="1Tw-RA-CZf"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </scrollView>
             </subviews>
