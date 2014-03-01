@@ -88,6 +88,16 @@
                                 <action selector="onSettingsButton:" destination="-1" eventType="touchUpInside" id="1Tw-RA-CZf"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-6v-toe">
+                            <rect key="frame" x="48" y="514" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="b47">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onB47Button:" destination="-1" eventType="touchUpInside" id="PGA-TT-IHd"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </scrollView>
             </subviews>

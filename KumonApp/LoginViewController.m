@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "LevelClearedViewController.h"
 #import "SettingsViewController.h"
+#import "B47ViewController.h"
 
 @interface LoginViewController ()
 @property (nonatomic, strong) UITextField *NameText;
@@ -22,6 +23,7 @@
 - (IBAction)onB49Button:(id)sender;
 - (IBAction)onLevelClearedButton:(id)sender;
 - (IBAction)onSettingsButton:(id)sender;
+- (IBAction)onB47Button:(id)sender;
 
 @end
 
@@ -249,5 +251,11 @@
     SettingsViewController *settingsClearedVC = [[SettingsViewController alloc] init];
     [self presentViewController:settingsClearedVC animated:YES completion:NULL];
     
+}
+
+- (IBAction)onB47Button:(id)sender {
+    NSLog(@"onB47Button");
+    B47ViewController *b47VC = [[B47ViewController alloc] init];
+    [self presentViewController:b47VC animated:YES completion:NULL];
 }
 @end
