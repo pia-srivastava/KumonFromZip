@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface B47ViewController : UIViewController
+@interface B47ViewController : UIViewController <UITextFieldDelegate>
 
 @end
