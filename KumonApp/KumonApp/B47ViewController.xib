@@ -8,6 +8,10 @@
             <connections>
                 <outlet property="problem1" destination="DBy-Ki-MFY" id="H0R-vQ-9cF"/>
                 <outlet property="problem2" destination="xak-yr-3Pn" id="tNe-i5-91z"/>
+                <outlet property="problem3" destination="H4Q-kK-IVO" id="n4b-MP-0kL"/>
+                <outlet property="problem4" destination="KpK-a1-eZJ" id="cjY-qg-ksi"/>
+                <outlet property="problem5" destination="lFW-Cp-2VW" id="rd3-4L-tin"/>
+                <outlet property="problem6" destination="dm0-fG-cWl" id="mVP-kZ-omd"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -55,7 +59,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="onBackButton:" destination="-1" eventType="touchDragOutside" id="ieG-Nu-HlQ"/>
+                        <action selector="onBackButton:" destination="-1" eventType="touchUpInside" id="ZzW-Bu-CbW"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b47_header" translatesAutoresizingMaskIntoConstraints="NO" id="EWz-BV-mgN">
@@ -68,7 +72,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="onTabProblem1:" destination="-1" eventType="editingDidEnd" id="fQb-eU-KlM"/>
+                        <action selector="editingDidEndCheckSums:" destination="-1" eventType="editingDidEnd" id="ive-Ll-Zsd"/>
                         <outlet property="delegate" destination="-1" id="FiA-jG-3Op"/>
                     </connections>
                 </textField>
@@ -78,6 +82,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
+                        <action selector="editingDidEndCheckSums:" destination="-1" eventType="editingDidEnd" id="ZF6-wK-nTW"/>
                         <outlet property="delegate" destination="-1" id="KyI-fO-i5J"/>
                     </connections>
                 </textField>
@@ -87,6 +92,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
+                        <action selector="editingDidEndCheckSums:" destination="-1" eventType="editingDidEnd" id="iMO-MS-YRA"/>
                         <outlet property="delegate" destination="-1" id="dSr-M3-Yi2"/>
                     </connections>
                 </textField>
@@ -96,6 +102,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
+                        <action selector="editingDidEndCheckSums:" destination="-1" eventType="editingDidEnd" id="ohX-NF-cFI"/>
                         <outlet property="delegate" destination="-1" id="Gq7-ar-cMG"/>
                     </connections>
                 </textField>
@@ -105,6 +112,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
+                        <action selector="editingDidEndCheckSums:" destination="-1" eventType="editingDidEnd" id="5Os-mL-4TH"/>
                         <outlet property="delegate" destination="-1" id="fDb-0h-Tbv"/>
                     </connections>
                 </textField>
@@ -114,6 +122,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
+                        <action selector="editingDidEndCheckSums:" destination="-1" eventType="editingDidEnd" id="Yo7-ca-RuK"/>
                         <outlet property="delegate" destination="-1" id="vXy-4W-3Y7"/>
                     </connections>
                 </textField>
